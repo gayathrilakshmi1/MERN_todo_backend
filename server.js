@@ -44,10 +44,13 @@ app.get('/', (req, res) => {
         button {
           padding: 10px 14px;
           border: none;
-          background: #222;
+          background: #2563eb;
           color: white;
           border-radius: 5px;
           cursor: pointer;
+        }
+        button:hover {
+          background: #1d4ed8;
         }
         li {
           display: flex;
@@ -69,7 +72,10 @@ app.get('/', (req, res) => {
           <button type="submit">Add</button>
         </form>
         <ul id="todoList"></ul>
-        <p><a href="/name">Developer Name</a></p>
+       <h1>My Todo List</h1>
+       <p style="text-align:center; color:#555;">
+        Developer: ${process.env.DEVELOPER_NAME || 'Your Name'}
+       </p> 
       </div>
 
       <script>
