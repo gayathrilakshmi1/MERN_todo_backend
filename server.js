@@ -66,16 +66,15 @@ app.get('/', (req, res) => {
     </head>
     <body>
       <div class="container">
-        <h1>My Todo List</h1>
+       <h1>My Todo List</h1>
+       <p style="text-align:center; color:#555;">
+        Developer: ${process.env.DEVELOPER_NAME || 'Your Name'}
+       </p> 
         <form id="todoForm">
           <input id="todoInput" placeholder="Enter a task..." required>
           <button type="submit">Add</button>
         </form>
         <ul id="todoList"></ul>
-       <h1>My Todo List</h1>
-       <p style="text-align:center; color:#555;">
-        Developer: ${process.env.DEVELOPER_NAME || 'Your Name'}
-       </p> 
       </div>
 
       <script>
